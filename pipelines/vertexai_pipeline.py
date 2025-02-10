@@ -17,6 +17,9 @@ import os
 from typing import Iterator, List, Union
 
 import vertexai
+from langchain_community.vectorstores import BigQueryVectorSearch
+from langchain_community.vectorstores.utils import DistanceStrategy
+from langchain_google_vertexai import VertexAIEmbeddings
 from pydantic import BaseModel, Field
 from vertexai.generative_models import (
     Content,
@@ -26,9 +29,6 @@ from vertexai.generative_models import (
     HarmCategory,
     Part,
 )
-from langchain_google_vertexai import VertexAIEmbeddings
-from langchain_community.vectorstores import BigQueryVectorSearch
-from langchain_community.vectorstores.utils import DistanceStrategy
 
 
 class Pipeline:
